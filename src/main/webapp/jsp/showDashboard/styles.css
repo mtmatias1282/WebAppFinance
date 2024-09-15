@@ -1,0 +1,607 @@
+/* General Styles */
+a {
+    text-decoration: none; 
+    color: inherit;
+}
+
+a:hover {
+    color: #007BFF; 
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #FCFCFD;
+}
+
+.main-container {
+    background: white;
+    border-radius: 14px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 280px;
+    background: white;
+    border-right: 1px solid #EAECF0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar-content {
+    padding-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.logo-container {
+    padding-left: 24px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo {
+    width: 33px;
+    height: 32px;
+    background: linear-gradient(1deg, #0058D4 0%, #00245B 100%);
+    position: relative;
+}
+
+.logo-text {
+    color: #00214F;
+    font-size: 28px;
+    font-family: 'IBM Plex Serif', serif;
+    font-weight: 700;
+}
+
+.menu {
+    padding-left: 16px;
+    padding-right: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.menu-item {
+    padding: 16px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #344054;
+}
+
+.menu-item.active {
+    background: linear-gradient(90deg, #0179FE 0%, #4893FF 100%);
+    color: white;
+}
+
+.content {
+    flex: 1;
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+/* Content Area */
+.content {
+    flex: 1;
+    padding: 48px 32px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+    height: 70px;
+}
+
+.welcome .title {
+    color: #101828;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 38px;
+}
+
+.welcome .description {
+    color: #475467;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.summary {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 24px;
+}
+
+.summary-item {
+    flex: 1;
+    height: 162px;
+    padding: 24px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.06);
+    border: 1px solid #EAECF0;
+}
+
+.summary-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #101828;
+}
+
+.summary-balance {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.balance-label {
+    color: #475467;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.balance-amount {
+    font-size: 30px;
+    font-weight: 600;
+    color: #101828;
+}
+
+/* Transactions */
+.transactions {
+    margin-top: 32px;
+    padding-top: 1px;
+    border-top: 1px solid #EAECF0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.transactions-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.transactions-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #101828;
+}
+
+.view-all {
+    padding: 10px 16px;
+    background: white;
+    border: 1px solid #D0D5DD;
+    border-radius: 8px;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    color: #344054;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.transactions-table {
+    display: flex;
+    flex-direction: column;
+}
+
+.transactions-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    border-bottom: 1px solid #EAECF0;
+}
+
+.transactions-row.header {
+    background: #F9FAFB;
+    font-weight: bold;
+    color: #475467;
+}
+
+.transactions-row:not(.header):nth-child(odd) {
+    background: #F6FEF9;
+}
+
+.transaction-cell {
+    flex: 1;
+    padding: 0 10px;
+}
+
+.transaction-name {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.transaction-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 24px;
+}
+
+.transaction-amount {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.transaction-amount.positive {
+    color: #039855;
+}
+
+.transaction-amount.negative {
+    color: #F04438;
+}
+
+.transaction-status {
+    padding: 2px 8px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.transaction-status.processing {
+    background: #F2F4F7;
+    color: #667085;
+}
+
+.transaction-status.success {
+    background: #ECFDF3;
+    color: #12B76A;
+}
+
+.transaction-status.declined {
+    background: #FEF3F2;
+    color: #F04438;
+}
+
+.category {
+    background: #D1E9FF;
+    color: #175CD3;
+    padding: 2px 8px;
+    border-radius: 16px;
+    font-weight: 500;
+}
+
+/* Right Sidebar */
+.sidebar-right {
+    width: 392px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.system-date {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    color: #101828;
+}
+
+.horizontal-separator {
+    height: 1px;
+    background: #EAECF0;
+}
+
+/* Notificación bajo el widget */
+.notification {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pagination-controls {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.pagination-controls .prev,
+.pagination-controls .next {
+    color: #344054;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.pagination-controls .dots {
+    display: flex;
+    gap: 8px;
+}
+
+.pagination-controls .dot {
+    width: 8px;
+    height: 8px;
+    background: #D1D1D1;
+    border-radius: 50%;
+}
+
+.pagination-controls .dot.active {
+    background: #0179FE;
+}
+
+.view-all-button {
+    margin-top: 20px;
+    padding: 10px 16px;
+    background: white;
+    border: 1px solid #D0D5DD;
+    border-radius: 8px;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    color: #344054;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+}
+
+.widget {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente si es necesario */
+    height: 100%; /* O ajusta según tu necesidad */
+}
+
+/* Card */
+.account-card {
+    width: 302px;
+    height: 182px;
+    background: linear-gradient(90deg, #0179FE 0%, #4893FF 100%);
+    border-radius: 19.11px;
+    border: 0.96px solid white;
+    box-shadow: 7.645569801330566px 9.556962013244629px 15.291139602661133px rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.card-background {
+    width: 624.80px;
+    height: 209.30px;
+    position: absolute;
+    top: 38.65px;
+    left: -139.53px;
+    opacity: 0.20;
+    border: 0.96px solid white;
+}
+
+.card-details {
+    padding: 16px;
+    position: relative;
+    z-index: 1;
+}
+
+.card-title {
+    font-size: 15.29px;
+    font-weight: 600;
+    color: white;
+}
+
+.card-icons {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.card-labels {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 16px;
+}
+
+.label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #344054;
+}
+
+/* Categories */
+.categories {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.categories-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #101828;
+}
+
+.category-item {
+    padding: 16px;
+    background: white;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.category-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.category-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.subscriptions-icon {
+    background: #D1E9FF;
+}
+
+.food-icon {
+    background: #FCE7F6;
+}
+
+.savings-icon {
+    background: #D1FADF;
+}
+
+.category-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.category-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: #475467;
+}
+
+.category-balance {
+    font-size: 14px;
+    font-weight: 400;
+    color: #175CD3;
+}
+
+.category-progress {
+    width: 100%;
+    height: 8px;
+    background: #EAECF0;
+    border-radius: 4px;
+    position: relative;
+}
+
+.progress-bar {
+    height: 100%;
+    border-radius: 4px;
+}
+
+.subscriptions {
+    width: 60%;
+    background: #175CD3;
+}
+
+.food {
+    width: 80%;
+    background: #C11574;
+}
+
+.savings {
+    width: 90%;
+    background: #027A48;
+}
+/* Estilos para el componente de filtrado por fecha */
+.date-filter-component {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px; /* Añade un pequeño margen inferior */
+    margin-top: 50px;
+}
+
+.date-inputs {
+    display: flex;
+    gap: 20px;
+}
+
+.date-inputs div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.date-inputs label {
+    color: #344054;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.date-inputs input[type="date"] {
+    padding: 10px;
+    color: #344054;
+    font-size: 16px;
+    border: 1px #EAECF0 solid;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.filter-button {
+    padding: 10px 16px;
+    background: #0179FE;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.pagination-controls .prev[data-enabled="false"],
+.pagination-controls .next[data-enabled="false"] {
+    color: #d0d5dd; /* Un color más claro para indicar que está deshabilitado */
+    cursor: not-allowed;
+}
+
+.pagination-controls .dot {
+    background-color: #d0d5dd; /* Color por defecto para los dots inactivos */
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 4px;
+}
+
+.pagination-controls .dot.active {
+    background-color: #007BFF; /* Color para el dot activo */
+}
+
+.icon-wrapper {
+    display: flex;
+    flex-direction: column; /* Apila los elementos verticalmente */
+    align-items: center;
+    gap: 8px; /* Espacio entre el icono y el texto */
+}
+
+.icon-button {
+    background-color: white; /* Fondo del ícono, ajusta según sea necesario */
+    border: none;
+    border-radius: 50%;
+    width: 50px; /* Ajusta el tamaño según tu necesidad */
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.icon-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: white; /* Color del texto debajo de cada icono */
+}

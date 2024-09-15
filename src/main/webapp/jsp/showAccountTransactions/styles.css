@@ -1,0 +1,278 @@
+/* General Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FCFCFD;
+}
+
+.transactions-container {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 48px 32px 56px;
+    background-color: white;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.header {
+    padding: 0 32px;
+}
+
+.account-name {
+    color: #101828;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 38px;
+}
+
+.main-content {
+    padding: 24px 32px;
+}
+
+.transaction-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.section-title {
+    color: #101828;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+}
+
+.filter-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background: white;
+    border: 1px solid #D0D5DD;
+    border-radius: 8px;
+    font-weight: 600;
+    color: #344054;
+}
+
+.filter-icon {
+    width: 15px;
+    height: 10px;
+    border: 1.67px solid #344054;
+}
+
+.transaction-table {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table-header,
+.table-row {
+    display: flex;
+    align-items: center;
+}
+
+.table-header {
+    background: #F9FAFB;
+    border-bottom: 1px solid #EAECF0;
+}
+
+.header-cell,
+.cell {
+    flex: 1;
+    padding: 12px 24px;
+}
+
+.header-cell {
+    color: #475467;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.table-row {
+    border-bottom: 1px solid #EAECF0;
+}
+
+.table-row:nth-child(even) {
+    background: #F6FEF9;
+}
+
+.transaction-cell {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.transaction-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 24px;
+}
+
+.transaction-name {
+    color: #101828;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.amount-cell {
+    font-weight: 600;
+}
+
+.amount-cell.negative {
+    color: #F04438;
+}
+
+.amount-cell.positive {
+    color: #039855;
+}
+
+.status-cell,
+.category-cell {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 16px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.status.processing {
+    background: #F2F4F7;
+    color: #344054;
+}
+
+.status.success {
+    background: #ECFDF3;
+    color: #027A48;
+}
+
+.status.declined {
+    background: #FEF3F2;
+    color: #B42318;
+}
+
+.category-cell.subscriptions {
+    border: 1.5px solid #1570EF;
+    color: #175CD3;
+}
+
+.category-cell.deposit {
+    border: 1.5px solid #039855;
+    color: #027A48;
+}
+
+.category-cell.groceries {
+    border: 1.5px solid #444CE7;
+    color: #3538CD;
+}
+
+.category-cell.income {
+    border: 1.5px solid #039855;
+    color: #027A48;
+}
+
+.category-cell.food-and-dining {
+    border: 1.5px solid #DD2590;
+    color: #C11574;
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 16px;
+    border-top: 1px solid #EAECF0;
+}
+
+.pagination-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #475467;
+    font-weight: 600;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.arrow-icon {
+    width: 20px;
+    height: 20px;
+    border: 1.67px solid #475467;
+}
+
+.page-numbers {
+    display: flex;
+    gap: 2px;
+}
+
+.page-number {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    color: #475467;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.page-number.active {
+    background: #F9FAFB;
+    color: #1D2939;
+}
+
+.date-filter-component {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.date-inputs {
+    display: flex;
+    gap: 20px;
+}
+
+.date-inputs div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.date-inputs label {
+    color: #344054;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.date-inputs input[type="date"] {
+    padding: 10px;
+    color: #344054;
+    font-size: 16px;
+    border: 1px #EAECF0 solid;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.filter-button-group {
+    margin-top: 10px;
+}
+
+.filter-button {
+    padding: 10px 16px;
+    background: #0179FE;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
